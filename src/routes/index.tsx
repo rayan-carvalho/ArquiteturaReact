@@ -1,18 +1,12 @@
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import Private from '../routes/Private';
+import Public from '../routes/Public';
 
-import  Home  from '../pages/Home';
-
-export const Routes = () => {
+export default function Router () {
+  const user = false;
   return (
     <BrowserRouter>
-      <Switch>
-        <Route path="/">
-          <Home />
-        </Route>
-        <Route path="*">
-          <Redirect to="/" />
-        </Route>
-      </Switch>
+      {user ? <Private /> : <Public/>}
     </BrowserRouter>
   );
 };

@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
+import  Router  from './routes';
 
 function App() {
-  return (
-    <>
-    <h1>Teste</h1>
-    </>
+  return ( 
+    <Router />  
   );
 }
 
